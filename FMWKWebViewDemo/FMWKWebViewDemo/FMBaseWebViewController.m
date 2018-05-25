@@ -222,7 +222,7 @@
     }
 }
 
-
+// 接收到服务重定向时回调
 - (void)webView:(WKWebView *)webView didReceiveServerRedirectForProvisionalNavigation:(null_unspecified WKNavigation *)navigation
 {
     if (self.delegate && [self.delegate respondsToSelector:@selector(webView:didReceiveServerRedirectForProvisionalNavigation:)]) {
@@ -261,7 +261,7 @@
     }
 }
 
-
+// 当最后下载数据失败时调用
 - (void)webView:(WKWebView *)webView didFailNavigation:(null_unspecified WKNavigation *)navigation withError:(NSError *)error
 {
     if (self.delegate && [self.delegate respondsToSelector:@selector(webView:didFailNavigation:withError:)]) {
